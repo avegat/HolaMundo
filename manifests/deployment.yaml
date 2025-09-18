@@ -20,7 +20,7 @@ spec:
         app: gfb-holamundo
     spec:
       containers:
-        - image: holamundo:latest
+        - image: avegat92/holamundo:latest
           name: gfb-holamundo
           ports:
             - containerPort: 80
