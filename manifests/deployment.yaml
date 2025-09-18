@@ -4,7 +4,7 @@ metadata:
   name: gfb-holamundo
   namespace: bpo
 spec:
-  replicas: 1
+  replicas: 3
   revisionHistoryLimit: 5
   selector:
     matchLabels:
