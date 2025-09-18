@@ -22,6 +22,5 @@ spec:
       containers:
         - image: avegat92/holamundo:latest
           name: gfb-holamundo
-      restartPolicy: Never
           ports:
             - containerPort: 80
