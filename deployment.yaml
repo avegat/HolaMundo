@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gfb-holamundo
+  namespace: bpo
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: gfb-holamundo
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate    
+  template:
+    metadata:
+      labels:
+        app: gfb-holamundo
+    spec:
+      containers:
+        - image: holamundo:latest
+          name: gfb-holamundo
+          ports:
+            - containerPort: 80
