@@ -4,7 +4,7 @@ metadata:
   name: gfb-holamundo
   namespace: bpo
 spec:
-  replicas: 1
+  replicas: 3
   revisionHistoryLimit: 5
   selector:
     matchLabels:
@@ -22,5 +22,6 @@ spec:
       containers:
         - image: avegat92/holamundo:latest
           name: gfb-holamundo
+      restartPolicy: Never
           ports:
             - containerPort: 80
